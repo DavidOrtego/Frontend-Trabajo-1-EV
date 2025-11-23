@@ -1,0 +1,226 @@
+.cabecera {
+    background-color: #d12727;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: repeat(5, 50px auto auto auto 50px);
+    grid-template-areas:
+        "navegacion navegacion navegacion navegacion navegacion navegacion"
+        "Pilotos Pilotos Pilotos Pilotos Pilotos Pilotos"
+        "Circuitos Circuitos Circuitos Circuitos Circuitos Circuitos "
+        "Equipos Equipos Equipos Equipos Equipos Equipos"
+        "Footer Footer Footer Footer Footer Footer";
+
+}
+
+.navegacion {
+    grid-area: navegacion;
+    display: flex;
+    background-color: rgb(68, 107, 190);
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.Pilotos {
+    grid-area: Pilotos;
+    background: linear-gradient(180deg, #180d0d, #d12727);
+    @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
+
+    * {
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        background: #100721;
+
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        height: 500px;
+        gap: 10px;
+        padding: 50px;
+
+        >div {
+            flex: 0 0 120px;
+            border-radius: 0.5rem;
+            transition: 0.5s ease-in-out;
+            cursor: pointer;
+            box-shadow: 1px 5px 15px #3e0e0e;
+            position: relative;
+            overflow: hidden;
+
+            &:nth-of-type(1) {
+                background: url("Imagenes_pilotos/ALONSO.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(2) {
+                background: url("Imagenes_pilotos/MAX.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(3) {
+                background: url("Imagenes_pilotos/HAMILTON.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(4) {
+                background: url("Imagenes_pilotos/LANDO.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(5) {
+                background: url("Imagenes_pilotos/RUSSELL.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(6) {
+                background: url("Imagenes_pilotos/SAINZ.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(7) {
+                background: url("Imagenes_pilotos/LAWSON.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(8) {
+                background: url("Imagenes_pilotos/OCON.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(9) {
+                background: url("Imagenes_pilotos/HULKENBERG.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(10) {
+                background: url("Imagenes_pilotos/GASLY.PNG") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(11) {
+                background: url("") no-repeat 50% / cover;
+            }
+
+            &:nth-of-type(12) {
+                background: url("") no-repeat 50% / cover;
+            }
+
+            .content {
+                font-size: 1.5rem;
+                color: #0d003b;
+                display: flex;
+                align-items: center;
+                padding: 15px;
+                opacity: 0;
+                flex-direction: column;
+                height: 100%;
+                justify-content: flex-end;
+                background: rgb(2, 2, 46);
+                background: linear-gradient(0deg,
+                        rgba(255, 255, 255, 0.676) 0%,
+                        rgba(0, 0, 0, 0) 100%);
+                transform: translatey(100%);
+                transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+                visibility: hidden;
+
+                span {
+                    display: block;
+                    margin-top: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+
+            &:hover {
+                flex: 0 0 250px;
+                box-shadow: 1px 3px 15px #d84545;
+                transform: translatey(-30px);
+            }
+
+            &:hover .content {
+                opacity: 1;
+                transform: translatey(0%);
+                visibility: visible;
+            }
+        }
+    }
+
+    .informacion-pilotos {
+        position: relative;
+        width: 600px;
+        max-width: 90%;
+        margin: 20px auto 40px;
+        background: rgba(220, 229, 236, 0.95);
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 18px 24px;
+        gap: 8px;
+        color: #000000;
+        z-index: 1;
+    }
+}
+
+.Circuitos {
+    grid-area: Circuitos;
+    background-color: #180d0d;
+    display: grid;
+    grid-area: Circuitos;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: auto auto auto auto;
+    padding: 50px;
+    gap: 50px;
+    justify-content: space-around;
+    grid-template-areas: none;
+}
+
+.opciones {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(220, 229, 236);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cart {
+    display: flex;
+    background-color: rgb(93, 171, 240);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.imagnes-circuitos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.Nombre-circuitos {
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.Equipos {
+    grid-area: Equipos;
+    background-color: rgb(218, 117, 81);
+
+}
+
+.footer {
+    grid-area: Footer;
+    background-color: #d12727;
+}
