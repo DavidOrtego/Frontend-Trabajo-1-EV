@@ -1,12 +1,17 @@
 .cabecera {
     background-color: #d12727;
     display: flex;
-
     align-items: center;
     justify-content: space-around;
     padding: 10px;
+    
 }
-
+.headercentro{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
 .contenedor {
     display: grid;
     grid-template-columns: repeat(6, 2fr);
@@ -30,7 +35,9 @@
 
 .Pilotos {
     grid-area: Pilotos;
-    background: linear-gradient(180deg, #180d0d, #d12727);
+    background-image: url(/fondo\ parte\ pilotos.PNG);
+    padding-bottom: 150px;
+
     @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
     * {
@@ -43,6 +50,7 @@
         display: grid;
         place-items: center;
         background: #100721;
+        
 
     }
 
@@ -167,6 +175,7 @@
         color: #000000;
         z-index: 1;
     }
+
 }
 
 .Circuitos {
