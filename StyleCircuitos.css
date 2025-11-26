@@ -1,0 +1,92 @@
+.cabecera {
+    background-color: #d12727;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    
+}
+.headercentro{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: repeat(5, 50px auto auto auto 50px);
+    grid-template-areas:
+        "navegacion navegacion navegacion navegacion navegacion navegacion"
+        "Pilotos Pilotos Pilotos Pilotos Pilotos Pilotos"
+        "Circuitos Circuitos Circuitos Circuitos Circuitos Circuitos "
+        "Equipos Equipos Equipos Equipos Equipos Equipos"
+        "Footer Footer Footer Footer Footer Footer";
+
+}
+
+.navegacion {
+    grid-area: navegacion;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navegacion h3 a{
+    color: white;
+}
+.Circuitos {
+    grid-area: Circuitos;
+    background-color: #180d0d;
+    display: grid;
+    grid-area: Circuitos;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: auto auto auto auto;
+    padding: 50px;
+    gap: 50px;
+    justify-content: space-around;
+    grid-template-areas: none;
+}
+
+.opciones {
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(220, 229, 236);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.cart {
+    display: flex;
+    background-color: rgb(93, 171, 240);
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.imagnes-circuitos img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.Nombre-circuitos {
+    font-size: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+.Equipos {
+    grid-area: Equipos;
+    background-color: rgb(218, 117, 81);
+
+}
+
+.footer {
+    grid-area: Footer;
+    background-color: #d12727;
+}
