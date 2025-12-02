@@ -15,7 +15,7 @@
 .contenedor {
     display: grid;
     grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: repeat(5, 50px auto auto auto 50px);
+    grid-template-rows: repeat(5, 50px auto auto auto auto);
     grid-template-areas:
         "navegacion navegacion navegacion navegacion navegacion navegacion"
         "Pilotos Pilotos Pilotos Pilotos Pilotos Pilotos"
@@ -150,7 +150,7 @@
 
             &:hover {
                 flex: 0 0 250px;
-                box-shadow: 1px 3px 15px #d84545;
+                box-shadow: 1px 3px 15px #ffffff;
                 transform: translatey(-30px);
             }
 
@@ -179,6 +179,7 @@
         color: #000000;
         z-index: 1;
     }
+    
 
 }
 
@@ -235,5 +236,19 @@
 
 .footer {
     grid-area: Footer;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+
     background-color: #d12727;
+    .redes{
+        display: flex;
+    }
+    .contacto{
+        display: flex;
+    }
+    .legal{
+        display: flex;
+    }
+
 }
