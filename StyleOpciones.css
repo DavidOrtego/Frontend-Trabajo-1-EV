@@ -1,0 +1,144 @@
+.cabecera {
+    background-color: #d12727;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.headercentro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(6, 2fr);
+    grid-template-rows: repeat(5, 50px auto auto auto auto);
+    grid-template-areas:
+        "navegacion navegacion navegacion navegacion navegacion navegacion"
+        "Pilotos Pilotos Pilotos Pilotos Pilotos Pilotos"
+        "Circuitos Circuitos Circuitos Circuitos Circuitos Circuitos "
+        "Footer Footer Footer Footer Footer Footer";
+
+}
+
+
+.Pilotos {
+    grid-area: Pilotos;
+}
+
+
+details {
+    background: #f8f8f8;
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 8px 0;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+form label {
+    display: block;
+    margin: 8px 0;
+}
+
+input,
+select {
+    padding: 6px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 360px;
+}
+
+button {
+    background: #d12727;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+.navegacion {
+    grid-area: navegacion;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.navegacion h3 a {
+    color: white;
+}
+
+
+.footer {
+    grid-area: Footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 50px;
+
+
+    background-color: #d12727;
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .legal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (max-width: 768px) {
+    /* Simplificar grid para móvil: una columna */
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            "navegacion"
+            "Pilotos"
+            "Footer";
+        
+    }
+
+    .cabecera { flex-direction: column; gap: 6px;  }
+    .cabecera img[alt="coche"]{ display: none; }
+    .cabecera img{ width: 120px; height: auto; }
+
+    .Pilotos{ grid-area: Pilotos;  }
+
+    .col-wrap{ display:block; }
+    .op-col{ margin-bottom:12px; }
+
+    details{ padding:8px; }
+    summary{ font-size: 1rem; }
+
+    input, select{ max-width:100%; }
+
+    .footer{ padding:20px; }
+}

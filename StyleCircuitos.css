@@ -4,18 +4,20 @@
     align-items: center;
     justify-content: space-around;
     padding: 10px;
-    
+
 }
-.headercentro{
+
+.headercentro {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+
 }
+
 .contenedor {
     display: grid;
     grid-template-columns: repeat(6, 2fr);
-    grid-template-rows: repeat(5, 50px auto auto auto 50px);
+    grid-template-rows: repeat(5, 50px auto auto auto auto);
     grid-template-areas:
         "navegacion navegacion navegacion navegacion navegacion navegacion"
         "Pilotos Pilotos Pilotos Pilotos Pilotos Pilotos"
@@ -32,9 +34,11 @@
     align-items: center;
     justify-content: space-evenly;
 }
-.navegacion h3 a{
+
+.navegacion h3 a {
     color: white;
 }
+
 .Circuitos {
     grid-area: Circuitos;
     background-color: #180d0d;
@@ -46,6 +50,7 @@
     gap: 50px;
     justify-content: space-around;
     grid-template-areas: none;
+    background-image: url(/imagenes/fondocircuitos.PNG);
 }
 
 .opciones {
@@ -60,7 +65,7 @@
 
 .cart {
     display: flex;
-    background-color: rgb(93, 171, 240);
+    background-color: rgb(252, 23, 23);
     flex-direction: column;
     align-items: center;
     padding: 10px;
@@ -80,13 +85,56 @@
     text-align: center;
 }
 
-.Equipos {
-    grid-area: Equipos;
-    background-color: rgb(218, 117, 81);
-
-}
 
 .footer {
     grid-area: Footer;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 50px;
     background-color: #d12727;
+
+    .redes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .legal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+            "navegacion"
+            "Pilotos"
+            "Circuitos"
+            "Footer";
+        
+    }
+
+    .cabecera{ flex-direction: column; gap: 8px; padding: 8px; }
+    .cabecera img[alt="coche"]{ display: none; }
+    .cabecera img{ width: 120px; height: auto; }
+
+    .Circuitos{ grid-template-columns: repeat(2, 1fr); padding: 20px; gap: 16px; }
+    .cart{ padding: 8px; width: px;}
+    .imagnes-circuitos img{ width: 140px; height: 140px; }
+
+    .opciones{ flex-direction: column; gap: 8px; }
+
+    .footer{ padding: 30px 12px; }
 }
